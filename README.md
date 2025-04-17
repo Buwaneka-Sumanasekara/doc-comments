@@ -1,36 +1,117 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# PDF Comments POC
+
+A Next.js application that allows users to view a document with multiple sections and add comments to each section. Built with modern web technologies and featuring a clean, intuitive interface.
+
+## Features
+
+- **Document Viewing**
+  - View document sections in a clean, organized layout
+  - Print-friendly document format
+  - Responsive design for all screen sizes
+
+- **Commenting System**
+  - Add comments to specific document sections
+  - User avatars with initials
+  - Real-time comment updates
+  - Popover-based comment form
+  - Comment history with timestamps
+
+- **User Interface**
+  - Modern UI with shadcn/ui components
+  - Split view: document on left, comments on right
+  - Interactive section selection
+  - Clean and intuitive design
+
+## Tech Stack
+
+- **Frontend**
+  - Next.js 14 with App Router
+  - TypeScript
+  - Tailwind CSS
+  - shadcn/ui components
+  - React Hooks for state management
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18.17 or later
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone [repository-url]
+   cd pdf-comments
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Run the development server:
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── app/                 # Next.js app router
+├── components/          # React components
+│   ├── ui/             # shadcn/ui components
+│   ├── Comments.tsx    # Comments component
+│   ├── Document.tsx    # Document component
+│   └── SectionedPage.tsx # Main page component
+├── types/              # TypeScript types
+└── lib/                # Utility functions
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features in Detail
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Document Viewing
+- Sections are displayed in a clean, card-based layout
+- Each section is clickable to view its comments
+- Print functionality for document sections
+- Responsive design that works on all devices
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Commenting System
+- Add comments to any section
+- Comments include:
+  - Author name
+  - Timestamp
+  - Avatar with initials
+  - Comment text
+- Popover-based comment form
+- Real-time updates
 
-## Learn More
+### User Interface
+- Split view layout:
+  - Document sections on the left (2/3 width)
+  - Comments panel on the right (1/3 width)
+- Interactive elements:
+  - Hover effects on sections
+  - Click-to-select sections
+  - Smooth transitions
+- Clean, modern design with proper spacing
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## License
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is licensed under the MIT License - see the LICENSE file for details.
