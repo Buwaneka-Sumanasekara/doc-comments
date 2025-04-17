@@ -1,63 +1,43 @@
-# PDF Comments POC
+# PDF Comments App
 
-A Next.js application that allows users to view a document with multiple sections and add comments to each section. Built with modern web technologies and featuring a clean, intuitive interface.
+A modern web application built with Next.js, shadcn, and TypeScript that allows users to add comments to different sections of a document.
 
 ## Features
 
-- **Document Viewing**
-  - View document sections in a clean, organized layout
-  - Print-friendly document format
-  - Responsive design for all screen sizes
-
-- **Commenting System**
-  - Add comments to specific document sections
-  - User avatars with initials
-  - Real-time comment updates
-  - Popover-based comment form
-  - Comment history with timestamps
-
-- **User Interface**
-  - Modern UI with shadcn/ui components
-  - Split view: document on left, comments on right
-  - Interactive section selection
-  - Clean and intuitive design
+- **Section-based Document View**: View and interact with document sections
+- **Interactive Comments**: Add, edit, and delete comments on specific sections
+- **User Avatars**: Visual representation of comment authors
+- **Hash-based Navigation**: Direct links to specific sections with smooth scrolling
+- **Print Functionality**: Print-friendly document view with comments
+- **Modern UI**: Built with shadcn components and Tailwind CSS
+- **TypeScript Support**: Full type safety throughout the application
 
 ## Tech Stack
 
-- **Frontend**
-  - Next.js 14 with App Router
-  - TypeScript
-  - Tailwind CSS
-  - shadcn/ui components
-  - React Hooks for state management
+- **Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Language**: TypeScript
+- **State Management**: React Context + useState
+- **Form Handling**: React Hook Form
+- **Icons**: Lucide React
 
 ## Getting Started
 
-### Prerequisites
-
-- Node.js 18.17 or later
-- npm or yarn
-
-### Installation
-
 1. Clone the repository:
    ```bash
-   git clone [repository-url]
+   git clone https://github.com/yourusername/pdf-comments.git
    cd pdf-comments
    ```
 
 2. Install dependencies:
    ```bash
    npm install
-   # or
-   yarn install
    ```
 
 3. Run the development server:
    ```bash
    npm run dev
-   # or
-   yarn dev
    ```
 
 4. Open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -66,43 +46,38 @@ A Next.js application that allows users to view a document with multiple section
 
 ```
 src/
-├── app/                 # Next.js app router
-├── components/          # React components
-│   ├── ui/             # shadcn/ui components
-│   ├── Comments.tsx    # Comments component
-│   ├── Document.tsx    # Document component
-│   └── SectionedPage.tsx # Main page component
-├── types/              # TypeScript types
-└── lib/                # Utility functions
+├── app/                    # Next.js app directory
+│   ├── layout.tsx         # Root layout
+│   └── page.tsx           # Home page
+├── components/            # Reusable components
+│   ├── Document.tsx      # Document display component
+│   ├── CommentBox.tsx    # Comment input component
+│   └── ui/               # shadcn components
+├── types/                # TypeScript type definitions
+│   └── index.ts         # Type definitions
+└── styles/              # Global styles
+    └── globals.css      # Global CSS
 ```
 
 ## Features in Detail
 
-### Document Viewing
-- Sections are displayed in a clean, card-based layout
-- Each section is clickable to view its comments
-- Print functionality for document sections
-- Responsive design that works on all devices
+### Document Navigation
+- Click on any section to highlight it and update the URL hash
+- Direct links to specific sections using hash-based navigation
+- Smooth scrolling to sections when clicking or using direct links
+- Print button to generate a print-friendly version of the document
 
-### Commenting System
+### Comments System
 - Add comments to any section
-- Comments include:
-  - Author name
-  - Timestamp
-  - Avatar with initials
-  - Comment text
-- Popover-based comment form
-- Real-time updates
+- Edit and delete your own comments
+- View comments with user avatars
+- Comments are displayed in a popover for better space management
 
-### User Interface
-- Split view layout:
-  - Document sections on the left (2/3 width)
-  - Comments panel on the right (1/3 width)
-- Interactive elements:
-  - Hover effects on sections
-  - Click-to-select sections
-  - Smooth transitions
-- Clean, modern design with proper spacing
+### User Experience
+- Modern, clean interface using shadcn components
+- Responsive design that works on all screen sizes
+- Smooth animations and transitions
+- Print-friendly layout with proper styling
 
 ## Contributing
 
@@ -114,4 +89,4 @@ src/
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
